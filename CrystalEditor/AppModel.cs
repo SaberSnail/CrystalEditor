@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Windows;
+using CrystalDuelingEngine.Rules;
 using CrystalEditor.MainWindow;
+using CrystalEditor.Serialization;
+using CrystalEditor.ViewModels;
 using GoldenAnvil.Utility;
+using GoldenAnvil.Utility.Logging;
 
 namespace CrystalEditor
 {
@@ -35,12 +39,74 @@ namespace CrystalEditor
 
 		public void Startup()
 		{
+			LogManager.Initialize(new ConsoleLogDestination(false));
+
+			RegisterFactories();
+
+			RunTemporaryTests();
+
 			MainWindowViewModel = new MainWindowViewModel();
+
 			OnStartupFinished.Raise(this);
 		}
 
 		public void Shutdown()
 		{
+		}
+
+		private void RegisterFactories()
+		{
+			AddTagEffectViewModel.RegisterFactory();
+			CopyTagEffectViewModel.RegisterFactory();
+			RemoveTagsEffectViewModel.RegisterFactory();
+
+			ConditionTagViewModel.RegisterFactory();
+			ConditionalTagsTagViewModel.RegisterFactory();
+			SimpleTagViewModel.RegisterFactory();
+			IntValueTagViewModel.RegisterFactory();
+			StringValueTagViewModel.RegisterFactory();
+
+			AlwaysConditionViewModel.RegisterFactory();
+			BinaryLogicConditionViewModel.RegisterFactory();
+			UnaryLogicConditionViewModel.RegisterFactory();
+			HasTagConditionViewModel.RegisterFactory();
+			ValueCompareConditionViewModel.RegisterFactory();
+		}
+
+		private void RunTemporaryTests()
+		{
+			string json;
+			string newJson;
+
+			// test game rules
+			using (var file = new System.IO.StreamReader("c:\\Temp\\Rules.txt"))
+				json = file.ReadToEnd().Trim();
+			var gameRules = JsonDeserializer.Deserialize(json) as GameRules;
+			newJson = JsonSerializer.Serialize(gameRules);
+			if (newJson != json)
+				throw new InvalidOperationException("Serialization round trip failed for GameRules.");
+
+			var rulesViewModel = GameRulesViewModel.CreateFromData(gameRules);
+			var newGameRules = rulesViewModel.ToGameRules();
+			newJson = JsonSerializer.Serialize(newGameRules);
+			if (newJson != json)
+				throw new InvalidOperationException("ViewModel round trip failed for GameRules.");
+
+			// test entity rules
+			using (var file = new System.IO.StreamReader("c:\\Temp\\GiantGoblinEntity.txt"))
+				json = file.ReadToEnd().Trim();
+			var goblin = JsonDeserializer.Deserialize(json) as EntityRules;
+			newJson = JsonSerializer.Serialize(goblin);
+			if (newJson != json)
+				throw new InvalidOperationException("Serialization round trip failed for EntityRules.");
+
+			// test entity rules
+			using (var file = new System.IO.StreamReader("c:\\Temp\\ManInChainmailEntity.txt"))
+				json = file.ReadToEnd().Trim();
+			var chainmail = JsonDeserializer.Deserialize(json) as EntityRules;
+			newJson = JsonSerializer.Serialize(chainmail);
+			if (newJson != json)
+				throw new InvalidOperationException("Serialization round trip failed for EntityRules.");
 		}
 	}
 }
