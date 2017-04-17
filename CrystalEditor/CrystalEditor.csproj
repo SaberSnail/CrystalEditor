@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -60,6 +64,31 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppModel.cs" />
+    <Compile Include="Serialization\JsonDeserializer.cs" />
+    <Compile Include="Serialization\JsonSerializer.cs" />
+    <Compile Include="ViewModels\AddTagEffectViewModel.cs" />
+    <Compile Include="ViewModels\AlwaysConditionViewModel.cs" />
+    <Compile Include="ViewModels\BinaryLogicConditionViewModel.cs" />
+    <Compile Include="ViewModels\BinaryLogicKind.cs" />
+    <Compile Include="ViewModels\CompareKind.cs" />
+    <Compile Include="ViewModels\ConditionalTagsTagViewModel.cs" />
+    <Compile Include="ViewModels\ConditionTagViewModel.cs" />
+    <Compile Include="ViewModels\ConditionTagViewModelBase.cs" />
+    <Compile Include="ViewModels\ConditionViewModelBase.cs" />
+    <Compile Include="ViewModels\CopyTagEffectViewModel.cs" />
+    <Compile Include="ViewModels\EffectViewModelBase.cs" />
+    <Compile Include="ViewModels\GameRulesViewModel.cs" />
+    <Compile Include="ViewModels\HasTagConditionViewModel.cs" />
+    <Compile Include="ViewModels\IntValueTagViewModel.cs" />
+    <Compile Include="ViewModels\RemoveTagsEffectViewModel.cs" />
+    <Compile Include="ViewModels\SimpleTagViewModel.cs" />
+    <Compile Include="ViewModels\StringValueTagViewModel.cs" />
+    <Compile Include="ViewModels\TagMatchConditionViewModelBase.cs" />
+    <Compile Include="ViewModels\TagViewModelBase.cs" />
+    <Compile Include="ViewModels\UnaryLogicConditionViewModel.cs" />
+    <Compile Include="ViewModels\UnaryLogicKind.cs" />
+    <Compile Include="ViewModels\ValueCompareConditionViewModel.cs" />
+    <Compile Include="ViewModels\ValueTagViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Page Include="MainWindow\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +117,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +129,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\..\CrystalDuelingEngine\CrystalDuelingEngine\CrystalDuelingEngine.csproj">
+      <Project>{94058FDB-FBEE-42BB-80DE-3AE422732963}</Project>
+      <Name>CrystalDuelingEngine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\GoldenAnvil.Utility\GoldenAnvil.Utility.Windows\GoldenAnvil.Utility.Windows.csproj">
       <Project>{49ea99af-8751-46fc-9fed-57fdd8f25e3b}</Project>
       <Name>GoldenAnvil.Utility.Windows</Name>
