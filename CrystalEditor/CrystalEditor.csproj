@@ -66,6 +66,9 @@
     <Compile Include="AppModel.cs" />
     <Compile Include="Serialization\JsonDeserializer.cs" />
     <Compile Include="Serialization\JsonSerializer.cs" />
+    <Compile Include="ViewModels\ActionMatrixEntryViewModel.cs" />
+    <Compile Include="ViewModels\ActionMatrixViewModel.cs" />
+    <Compile Include="ViewModels\ActionViewModel.cs" />
     <Compile Include="ViewModels\AddTagEffectViewModel.cs" />
     <Compile Include="ViewModels\AlwaysConditionViewModel.cs" />
     <Compile Include="ViewModels\BinaryLogicConditionViewModel.cs" />
@@ -77,11 +80,15 @@
     <Compile Include="ViewModels\ConditionViewModelBase.cs" />
     <Compile Include="ViewModels\CopyTagEffectViewModel.cs" />
     <Compile Include="ViewModels\EffectViewModelBase.cs" />
+    <Compile Include="ViewModels\EntityRulesViewModel.cs" />
     <Compile Include="ViewModels\GameRulesViewModel.cs" />
     <Compile Include="ViewModels\HasTagConditionViewModel.cs" />
     <Compile Include="ViewModels\IntValueTagViewModel.cs" />
     <Compile Include="ViewModels\RemoveTagsEffectViewModel.cs" />
+    <Compile Include="ViewModels\ResultViewModel.cs" />
     <Compile Include="ViewModels\SimpleTagViewModel.cs" />
+    <Compile Include="ViewModels\StringLookupItemViewModel.cs" />
+    <Compile Include="ViewModels\StringLookupViewModel.cs" />
     <Compile Include="ViewModels\StringValueTagViewModel.cs" />
     <Compile Include="ViewModels\TagMatchConditionViewModelBase.cs" />
     <Compile Include="ViewModels\TagViewModelBase.cs" />

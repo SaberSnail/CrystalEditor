@@ -53,7 +53,7 @@ namespace CrystalEditor.ViewModels
 			return rules;
 		}
 
-		public GameRulesViewModel(IEnumerable<EffectViewModelBase> preBattleEffects, IEnumerable<EffectViewModelBase> postBattleEffects, IEnumerable<EffectViewModelBase> postTurnEffects, IEnumerable<EffectViewModelBase> preResultEffects, IEnumerable<EffectViewModelBase> postResultEffects, ConditionViewModelBase eliminationCondition)
+		private GameRulesViewModel(IEnumerable<EffectViewModelBase> preBattleEffects, IEnumerable<EffectViewModelBase> postBattleEffects, IEnumerable<EffectViewModelBase> postTurnEffects, IEnumerable<EffectViewModelBase> preResultEffects, IEnumerable<EffectViewModelBase> postResultEffects, ConditionViewModelBase eliminationCondition)
 		{
 			PreBattleEffects = new ObservableCollection<EffectViewModelBase>(preBattleEffects);
 			PostBattleEffects = new ObservableCollection<EffectViewModelBase>(postBattleEffects);
