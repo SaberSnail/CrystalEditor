@@ -1,3 +1,4 @@
+using System.Globalization;
 using CrystalDuelingEngine;
 using CrystalDuelingEngine.Effects;
 
@@ -19,7 +20,8 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(TagKey), value, ref m_tagKey);
+				if (SetPropertyField(nameof(TagKey), value, ref m_tagKey))
+					RefreshLabelSoon();
 			}
 		}
 
@@ -58,7 +60,8 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(NewTagKey), value, ref m_newTagKey);
+				if (SetPropertyField(nameof(NewTagKey), value, ref m_newTagKey))
+					RefreshLabelSoon();
 			}
 		}
 
@@ -79,6 +82,13 @@ namespace CrystalEditor.ViewModels
 		{
 			var condition = Condition.ToConditionBase();
 			return new CopyTagsEffect(m_tagKey, m_tagKeyMatchKind, m_tagScope, condition, m_newTagKey, m_conflictResolution, Target);
+		}
+
+		protected override string GetLabel()
+		{
+			if (m_tagKey == null)
+				return OurResources.NewCopyTagLabel;
+			return string.Format(CultureInfo.CurrentCulture, OurResources.CopyTagLabel, m_tagKey, m_newTagKey ?? "");
 		}
 
 		private new static EffectViewModelBase CreateFromData(EffectBase effect)

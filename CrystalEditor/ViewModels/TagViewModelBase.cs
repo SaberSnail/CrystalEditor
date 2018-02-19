@@ -4,7 +4,7 @@ using CrystalDuelingEngine.Tags;
 
 namespace CrystalEditor.ViewModels
 {
-	public abstract class TagViewModelBase : ViewModelBase
+	public abstract class TagViewModelBase : LabelledViewModelBase
 	{
 		public static TagViewModelBase CreateFromData(TagBase tag)
 		{
@@ -26,7 +26,8 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(Key), value, ref m_key);
+				if (SetPropertyField(nameof(Key), value, ref m_key))
+					RefreshLabelSoon();
 			}
 		}
 
@@ -44,6 +45,11 @@ namespace CrystalEditor.ViewModels
 		}
 
 		public abstract TagBase ToTagBase();
+
+		protected override string GetLabel()
+		{
+			return m_key;
+		}
 
 		protected static void RegisterViewModelFactory(Func<TagBase, TagViewModelBase> factory)
 		{

@@ -1,3 +1,4 @@
+using System.Globalization;
 using CrystalDuelingEngine;
 using CrystalDuelingEngine.Effects;
 
@@ -19,7 +20,8 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(Tag), value, ref m_tag);
+				if (SetPropertyField(nameof(Tag), value, ref m_tag))
+					RefreshLabelSoon();
 			}
 		}
 
@@ -41,6 +43,13 @@ namespace CrystalEditor.ViewModels
 			var tag = m_tag.ToTagBase();
 			var condition = Condition.ToConditionBase();
 			return new AddTagEffect(tag, m_conflictResolution, condition, Target);
+		}
+
+		protected override string GetLabel()
+		{
+			if (m_tag == null)
+				return OurResources.NewAddTagLabel;
+			return string.Format(CultureInfo.CurrentCulture, OurResources.AddTagLabel, m_tag.Label);
 		}
 
 		private new static EffectViewModelBase CreateFromData(EffectBase effect)

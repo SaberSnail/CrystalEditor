@@ -64,6 +64,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppModel.cs" />
+    <Compile Include="OurResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OurResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Serialization\JsonDeserializer.cs" />
     <Compile Include="Serialization\JsonSerializer.cs" />
     <Compile Include="ViewModels\ActionMatrixEntryViewModel.cs" />
@@ -84,6 +89,7 @@
     <Compile Include="ViewModels\GameRulesViewModel.cs" />
     <Compile Include="ViewModels\HasTagConditionViewModel.cs" />
     <Compile Include="ViewModels\IntValueTagViewModel.cs" />
+    <Compile Include="ViewModels\LabelledViewModelBase.cs" />
     <Compile Include="ViewModels\RemoveTagsEffectViewModel.cs" />
     <Compile Include="ViewModels\ResultViewModel.cs" />
     <Compile Include="ViewModels\SimpleTagViewModel.cs" />
@@ -92,14 +98,22 @@
     <Compile Include="ViewModels\StringValueTagViewModel.cs" />
     <Compile Include="ViewModels\TagMatchConditionViewModelBase.cs" />
     <Compile Include="ViewModels\TagViewModelBase.cs" />
+    <Compile Include="ViewModels\TreeNodeViewModelBase.cs" />
     <Compile Include="ViewModels\UnaryLogicConditionViewModel.cs" />
     <Compile Include="ViewModels\UnaryLogicKind.cs" />
     <Compile Include="ViewModels\ValueCompareConditionViewModel.cs" />
     <Compile Include="ViewModels\ValueTagViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\GameRulesView.xaml.cs">
+      <DependentUpon>GameRulesView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GameRulesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +134,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="OurResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OurResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

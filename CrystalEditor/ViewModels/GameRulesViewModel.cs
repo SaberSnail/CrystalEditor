@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using CrystalDuelingEngine.Rules;
 
@@ -18,15 +17,23 @@ namespace CrystalEditor.ViewModels
 			return new GameRulesViewModel(preBattleEffects, postBattleEffects, postTurnEffects, preResultEffects, postResultEffects, eliminationCondition);
 		}
 
-		public ObservableCollection<EffectViewModelBase> PreBattleEffects { get; }
+		public LabelledViewModelBase SelectedEffect
+		{
+			get
+			{
+				VerifyAccess();
+				return m_selectedEffect;
+			}
+			set
+			{
+				if (value is EffectViewModelBase)
+					SetPropertyField(nameof(SelectedEffect), value, ref m_selectedEffect);
+				else
+					SetPropertyField(nameof(SelectedEffect), null, ref m_selectedEffect);
+			}
+		}
 
-		public ObservableCollection<EffectViewModelBase> PostBattleEffects { get; }
-
-		public ObservableCollection<EffectViewModelBase> PostTurnEffects { get; }
-
-		public ObservableCollection<EffectViewModelBase> PreResultEffects { get; }
-
-		public ObservableCollection<EffectViewModelBase> PostResultEffects { get; }
+		public IReadOnlyList<TreeNodeViewModelBase> Effects { get; }
 
 		public ConditionViewModelBase EliminationCondition
 		{
@@ -43,26 +50,44 @@ namespace CrystalEditor.ViewModels
 
 		public GameRules ToGameRules()
 		{
-			var rules = new GameRules();
-			rules.PreBattleEffects = PreBattleEffects.Select(x => x.ToEffectBase()).ToList().AsReadOnly();
-			rules.PostBattleEffects = PostBattleEffects.Select(x => x.ToEffectBase()).ToList().AsReadOnly();
-			rules.PostTurnEffects = PostTurnEffects.Select(x => x.ToEffectBase()).ToList().AsReadOnly();
-			rules.PreResultEffects = PreResultEffects.Select(x => x.ToEffectBase()).ToList().AsReadOnly();
-			rules.PostResultEffects = PostResultEffects.Select(x => x.ToEffectBase()).ToList().AsReadOnly();
-			rules.EliminationCondition = m_eliminationCondition.ToConditionBase();
+			var rules = new GameRules
+			{
+				PreBattleEffects = m_preBattleEffectsNode.GetChildren().Select(x => x.ToEffectBase()).ToList().AsReadOnly(),
+				PostBattleEffects = m_postBattleEffectsNode.GetChildren().Select(x => x.ToEffectBase()).ToList().AsReadOnly(),
+				PostTurnEffects = m_postTurnEffectsNode.GetChildren().Select(x => x.ToEffectBase()).ToList().AsReadOnly(),
+				PreResultEffects = m_preResultEffectsNode.GetChildren().Select(x => x.ToEffectBase()).ToList().AsReadOnly(),
+				PostResultEffects = m_postResultEffectsNode.GetChildren().Select(x => x.ToEffectBase()).ToList().AsReadOnly(),
+				EliminationCondition = m_eliminationCondition.ToConditionBase()
+			};
 			return rules;
 		}
 
 		private GameRulesViewModel(IEnumerable<EffectViewModelBase> preBattleEffects, IEnumerable<EffectViewModelBase> postBattleEffects, IEnumerable<EffectViewModelBase> postTurnEffects, IEnumerable<EffectViewModelBase> preResultEffects, IEnumerable<EffectViewModelBase> postResultEffects, ConditionViewModelBase eliminationCondition)
 		{
-			PreBattleEffects = new ObservableCollection<EffectViewModelBase>(preBattleEffects);
-			PostBattleEffects = new ObservableCollection<EffectViewModelBase>(postBattleEffects);
-			PostTurnEffects = new ObservableCollection<EffectViewModelBase>(postTurnEffects);
-			PreResultEffects = new ObservableCollection<EffectViewModelBase>(preResultEffects);
-			PostResultEffects = new ObservableCollection<EffectViewModelBase>(postResultEffects);
 			m_eliminationCondition = eliminationCondition;
+			m_selectedEffect = new TreeNodeViewModel<EffectViewModelBase>("", Enumerable.Empty<EffectViewModelBase>());
+
+			m_preBattleEffectsNode = new TreeNodeViewModel<EffectViewModelBase>(OurResources.PreBattleEffectsNodeLabel, preBattleEffects);
+			m_preResultEffectsNode = new TreeNodeViewModel<EffectViewModelBase>(OurResources.PreResultEffectsNodeLabel, preResultEffects);
+			m_postResultEffectsNode = new TreeNodeViewModel<EffectViewModelBase>(OurResources.PostResultEffectsNodelLabel, postResultEffects);
+			m_postTurnEffectsNode = new TreeNodeViewModel<EffectViewModelBase>(OurResources.PostTurnEffectsNodeLabel, postTurnEffects);
+			m_postBattleEffectsNode = new TreeNodeViewModel<EffectViewModelBase>(OurResources.PostBattleEffectsNodeLabel, postBattleEffects);
+			Effects = new List<TreeNodeViewModelBase>
+			{
+				m_preBattleEffectsNode,
+				m_preResultEffectsNode,
+				m_postResultEffectsNode,
+				m_postTurnEffectsNode,
+				m_postBattleEffectsNode,
+			};
 		}
 
+		readonly TreeNodeViewModel<EffectViewModelBase> m_preBattleEffectsNode;
+		readonly TreeNodeViewModel<EffectViewModelBase> m_preResultEffectsNode;
+		readonly TreeNodeViewModel<EffectViewModelBase> m_postResultEffectsNode;
+		readonly TreeNodeViewModel<EffectViewModelBase> m_postTurnEffectsNode;
+		readonly TreeNodeViewModel<EffectViewModelBase> m_postBattleEffectsNode;
 		ConditionViewModelBase m_eliminationCondition;
+		LabelledViewModelBase m_selectedEffect;
 	}
 }
