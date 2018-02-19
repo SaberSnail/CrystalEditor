@@ -121,6 +121,12 @@
     <value>Add "{0}" tag</value>
     <comment>{0} is the tag label</comment>
   </data>
+  <data name="ConditionHeaderLabel" xml:space="preserve">
+    <value>Condition:</value>
+  </data>
+  <data name="ConflictResolutionHeaderLabel" xml:space="preserve">
+    <value>On conflict:</value>
+  </data>
   <data name="CopyTagLabel" xml:space="preserve">
     <value>Copy "{0}" tag to "{1}"</value>
     <comment>{0} is the source tag key; {1} is the destination tag key</comment>
@@ -133,6 +139,9 @@
   </data>
   <data name="NewRemoveTagLabel" xml:space="preserve">
     <value>Remove tag</value>
+  </data>
+  <data name="NewTagKeyHeaderLabel" xml:space="preserve">
+    <value>New tag key:</value>
   </data>
   <data name="PostBattleEffectsNodeLabel" xml:space="preserve">
     <value>Post-Battle Effects</value>
@@ -152,5 +161,20 @@
   <data name="RemoveTagLabel" xml:space="preserve">
     <value>Remove "{0}" tag</value>
     <comment>{0} is the tag key</comment>
+  </data>
+  <data name="TagHeaderLabel" xml:space="preserve">
+    <value>Tag:</value>
+  </data>
+  <data name="TagKeyHeaderLabel" xml:space="preserve">
+    <value>Tag key:</value>
+  </data>
+  <data name="TagKeyMatchKindHeaderLabel" xml:space="preserve">
+    <value>Match:</value>
+  </data>
+  <data name="TagScopeHeaderLabel" xml:space="preserve">
+    <value>Scope:</value>
+  </data>
+  <data name="TargetHeaderLabel" xml:space="preserve">
+    <value>Target:</value>
   </data>
 </root>

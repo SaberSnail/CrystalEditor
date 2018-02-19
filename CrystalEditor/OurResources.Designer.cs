@@ -22,7 +22,7 @@ namespace CrystalEditor {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class OurResources {
+    public class OurResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace CrystalEditor {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CrystalEditor.OurResources", typeof(OurResources).Assembly);
@@ -51,7 +51,7 @@ namespace CrystalEditor {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,16 +63,34 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Add &quot;{0}&quot; tag.
         /// </summary>
-        internal static string AddTagLabel {
+        public static string AddTagLabel {
             get {
                 return ResourceManager.GetString("AddTagLabel", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Condition:.
+        /// </summary>
+        public static string ConditionHeaderLabel {
+            get {
+                return ResourceManager.GetString("ConditionHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to On conflict:.
+        /// </summary>
+        public static string ConflictResolutionHeaderLabel {
+            get {
+                return ResourceManager.GetString("ConflictResolutionHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy &quot;{0}&quot; tag to &quot;{1}&quot;.
         /// </summary>
-        internal static string CopyTagLabel {
+        public static string CopyTagLabel {
             get {
                 return ResourceManager.GetString("CopyTagLabel", resourceCulture);
             }
@@ -81,7 +99,7 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Add tag.
         /// </summary>
-        internal static string NewAddTagLabel {
+        public static string NewAddTagLabel {
             get {
                 return ResourceManager.GetString("NewAddTagLabel", resourceCulture);
             }
@@ -90,7 +108,7 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Copy tag.
         /// </summary>
-        internal static string NewCopyTagLabel {
+        public static string NewCopyTagLabel {
             get {
                 return ResourceManager.GetString("NewCopyTagLabel", resourceCulture);
             }
@@ -99,16 +117,25 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Remove tag.
         /// </summary>
-        internal static string NewRemoveTagLabel {
+        public static string NewRemoveTagLabel {
             get {
                 return ResourceManager.GetString("NewRemoveTagLabel", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New tag key:.
+        /// </summary>
+        public static string NewTagKeyHeaderLabel {
+            get {
+                return ResourceManager.GetString("NewTagKeyHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Post-Battle Effects.
         /// </summary>
-        internal static string PostBattleEffectsNodeLabel {
+        public static string PostBattleEffectsNodeLabel {
             get {
                 return ResourceManager.GetString("PostBattleEffectsNodeLabel", resourceCulture);
             }
@@ -117,7 +144,7 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Post-Result Effects.
         /// </summary>
-        internal static string PostResultEffectsNodelLabel {
+        public static string PostResultEffectsNodelLabel {
             get {
                 return ResourceManager.GetString("PostResultEffectsNodelLabel", resourceCulture);
             }
@@ -126,7 +153,7 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Post-Turn Effects.
         /// </summary>
-        internal static string PostTurnEffectsNodeLabel {
+        public static string PostTurnEffectsNodeLabel {
             get {
                 return ResourceManager.GetString("PostTurnEffectsNodeLabel", resourceCulture);
             }
@@ -135,7 +162,7 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Pre-Battle Effects.
         /// </summary>
-        internal static string PreBattleEffectsNodeLabel {
+        public static string PreBattleEffectsNodeLabel {
             get {
                 return ResourceManager.GetString("PreBattleEffectsNodeLabel", resourceCulture);
             }
@@ -144,7 +171,7 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Pre-Result Effects.
         /// </summary>
-        internal static string PreResultEffectsNodeLabel {
+        public static string PreResultEffectsNodeLabel {
             get {
                 return ResourceManager.GetString("PreResultEffectsNodeLabel", resourceCulture);
             }
@@ -153,9 +180,54 @@ namespace CrystalEditor {
         /// <summary>
         ///   Looks up a localized string similar to Remove &quot;{0}&quot; tag.
         /// </summary>
-        internal static string RemoveTagLabel {
+        public static string RemoveTagLabel {
             get {
                 return ResourceManager.GetString("RemoveTagLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag:.
+        /// </summary>
+        public static string TagHeaderLabel {
+            get {
+                return ResourceManager.GetString("TagHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag key:.
+        /// </summary>
+        public static string TagKeyHeaderLabel {
+            get {
+                return ResourceManager.GetString("TagKeyHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Match:.
+        /// </summary>
+        public static string TagKeyMatchKindHeaderLabel {
+            get {
+                return ResourceManager.GetString("TagKeyMatchKindHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scope:.
+        /// </summary>
+        public static string TagScopeHeaderLabel {
+            get {
+                return ResourceManager.GetString("TagScopeHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target:.
+        /// </summary>
+        public static string TargetHeaderLabel {
+            get {
+                return ResourceManager.GetString("TargetHeaderLabel", resourceCulture);
             }
         }
     }

@@ -33,7 +33,15 @@
 
 			<GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch" />
 
-			<ContentControl Grid.Column="2" Content="{Binding SelectedEffect}" />
+			<ContentControl Grid.Column="2" Content="{Binding SelectedEffect}">
+				<ContentControl.Resources>
+					<ResourceDictionary>
+						<ResourceDictionary.MergedDictionaries>
+							<ResourceDictionary Source="../Views/Edit/EditViews.xaml" />
+						</ResourceDictionary.MergedDictionaries>
+					</ResourceDictionary>
+				</ContentControl.Resources>
+			</ContentControl>
 		</Grid>
 	</DataTemplate>
 	
