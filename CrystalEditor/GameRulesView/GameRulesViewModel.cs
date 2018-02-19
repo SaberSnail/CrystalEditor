@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using CrystalDuelingEngine.Rules;
+using CrystalEditor.ViewModels;
 
-namespace CrystalEditor.ViewModels
+namespace CrystalEditor.GameRulesView
 {
 	public sealed class GameRulesViewModel : ViewModelBase
 	{

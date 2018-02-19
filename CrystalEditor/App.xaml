@@ -7,7 +7,7 @@
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="pack://application:,,,/GoldenAnvil.Utility.Windows;component/Theme/Default.xaml" />
-				<ResourceDictionary Source="Views/GameRulesView.xaml" />
+				<ResourceDictionary Source="GameRulesView/GameRulesView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Application.Resources>

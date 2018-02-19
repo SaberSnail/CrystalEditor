@@ -1,4 +1,5 @@
 ﻿using CrystalDuelingEngine.Rules;
+using CrystalEditor.GameRulesView;
 using CrystalEditor.Serialization;
 using CrystalEditor.ViewModels;
 

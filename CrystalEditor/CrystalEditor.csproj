@@ -86,7 +86,7 @@
     <Compile Include="ViewModels\CopyTagEffectViewModel.cs" />
     <Compile Include="ViewModels\EffectViewModelBase.cs" />
     <Compile Include="ViewModels\EntityRulesViewModel.cs" />
-    <Compile Include="ViewModels\GameRulesViewModel.cs" />
+    <Compile Include="GameRulesView\GameRulesViewModel.cs" />
     <Compile Include="ViewModels\HasTagConditionViewModel.cs" />
     <Compile Include="ViewModels\IntValueTagViewModel.cs" />
     <Compile Include="ViewModels\LabelledViewModelBase.cs" />
@@ -104,14 +104,14 @@
     <Compile Include="ViewModels\ValueCompareConditionViewModel.cs" />
     <Compile Include="ViewModels\ValueTagViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\GameRulesView.xaml.cs">
+    <Compile Include="GameRulesView\GameRulesView.xaml.cs">
       <DependentUpon>GameRulesView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\GameRulesView.xaml">
+    <Page Include="GameRulesView\GameRulesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,7 +152,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CrystalDuelingEngine\CrystalDuelingEngine\CrystalDuelingEngine.csproj">
       <Project>{94058FDB-FBEE-42BB-80DE-3AE422732963}</Project>
