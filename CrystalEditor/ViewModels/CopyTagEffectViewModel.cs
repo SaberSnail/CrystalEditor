@@ -93,8 +93,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static EffectViewModelBase CreateFromData(EffectBase effect)
 		{
-			var copyTagsEffect = effect as CopyTagsEffect;
-			if (copyTagsEffect == null)
+			if (!(effect is CopyTagsEffect copyTagsEffect))
 				return null;
 
 			var condition = ConditionViewModelBase.CreateFromData(copyTagsEffect.Condition);

@@ -16,8 +16,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static TagViewModelBase CreateFromData(TagBase tag)
 		{
-			var simpleTag = tag as SimpleTag;
-			if (simpleTag == null)
+			if (!(tag is SimpleTag simpleTag))
 				return null;
 
 			return new SimpleTagViewModel(simpleTag.Key, simpleTag.Duration);

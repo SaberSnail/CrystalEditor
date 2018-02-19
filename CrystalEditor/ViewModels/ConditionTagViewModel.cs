@@ -17,8 +17,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static TagViewModelBase CreateFromData(TagBase tag)
 		{
-			var conditionTag = tag as ConditionTag;
-			if (conditionTag == null)
+			if (!(tag is ConditionTag conditionTag))
 				return null;
 
 			var condition = ConditionViewModelBase.CreateFromData(conditionTag.Condition);

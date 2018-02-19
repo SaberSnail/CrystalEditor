@@ -29,8 +29,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static TagViewModelBase CreateFromData(TagBase tag)
 		{
-			var intValueTag = tag as IntValueTag;
-			if (intValueTag == null)
+			if (!(tag is IntValueTag intValueTag))
 				return null;
 
 			return new IntValueTagViewModel(intValueTag.Value, intValueTag.Key, intValueTag.Duration);

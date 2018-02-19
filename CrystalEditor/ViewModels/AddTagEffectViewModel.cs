@@ -54,8 +54,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static EffectViewModelBase CreateFromData(EffectBase effect)
 		{
-			var addTagEffect = effect as AddTagEffect;
-			if (addTagEffect == null)
+			if (!(effect is AddTagEffect addTagEffect))
 				return null;
 
 			var tag = TagViewModelBase.CreateFromData(addTagEffect.Tag);

@@ -17,8 +17,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static ConditionViewModelBase CreateFromData(ConditionBase condition)
 		{
-			var hasTagCondition = condition as HasTagCondition;
-			if (hasTagCondition == null)
+			if (!(condition is HasTagCondition hasTagCondition))
 				return null;
 
 			return new HasTagConditionViewModel(hasTagCondition.MatchScopes, hasTagCondition.MatchKey, hasTagCondition.KeyMatchKind);

@@ -29,8 +29,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static ConditionViewModelBase CreateFromData(ConditionBase condition)
 		{
-			var alwaysCondition = condition as AlwaysCondition;
-			if (alwaysCondition == null)
+			if (!(condition is AlwaysCondition alwaysCondition))
 				return null;
 
 			return new AlwaysConditionViewModel(alwaysCondition.Value);

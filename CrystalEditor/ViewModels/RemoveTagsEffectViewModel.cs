@@ -54,8 +54,7 @@ namespace CrystalEditor.ViewModels
 
 		private new static EffectViewModelBase CreateFromData(EffectBase effect)
 		{
-			var removeTagsEffect = effect as RemoveTagsEffect;
-			if (removeTagsEffect == null)
+			if (!(effect is RemoveTagsEffect removeTagsEffect))
 				return null;
 
 			var condition = ConditionViewModelBase.CreateFromData(removeTagsEffect.Condition);

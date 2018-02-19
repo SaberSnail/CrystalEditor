@@ -81,35 +81,21 @@ namespace CrystalEditor.ViewModels
 
 		private new static ConditionViewModelBase CreateFromData(ConditionBase condition)
 		{
+			if (!(condition is ValueCompareCondition compareCondition))
+				return null;
+
 			CompareKind? kind = null;
-			ValueCompareCondition compareCondition = condition as EqualsValueCondition;
-			if (compareCondition != null)
+			if (condition is EqualsValueCondition)
 				kind = CompareKind.Equals;
-			if (compareCondition == null)
-			{
-				compareCondition = condition as GreaterThanOrEqualValueCondition;
-				if (compareCondition != null)
-					kind = CompareKind.GreaterThanOrEqual;
-			}
-			if (compareCondition == null)
-			{
-				compareCondition = condition as GreaterThanValueCondition;
-				if (compareCondition != null)
-					kind = CompareKind.GreaterThan;
-			}
-			if (compareCondition == null)
-			{
-				compareCondition = condition as LessThanOrEqualValueCondition;
-				if (compareCondition != null)
-					kind = CompareKind.LessThanOrEqual;
-			}
-			if (compareCondition == null)
-			{
-				compareCondition = condition as LessThanValueCondition;
-				if (compareCondition != null)
-					kind = CompareKind.LessThan;
-			}
-			if (compareCondition == null)
+			else if (condition is GreaterThanOrEqualValueCondition)
+				kind = CompareKind.GreaterThanOrEqual;
+			else if (condition is GreaterThanValueCondition)
+				kind = CompareKind.GreaterThan;
+			else if (condition is LessThanOrEqualValueCondition)
+				kind = CompareKind.LessThanOrEqual;
+			else if (condition is LessThanValueCondition)
+				kind = CompareKind.LessThan;
+			if (kind == null)
 				return null;
 
 			return compareCondition.CompareIntValue.HasValue ?

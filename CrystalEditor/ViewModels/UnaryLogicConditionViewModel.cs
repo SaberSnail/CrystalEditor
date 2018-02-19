@@ -50,13 +50,13 @@ namespace CrystalEditor.ViewModels
 
 		private new static ConditionViewModelBase CreateFromData(ConditionBase condition)
 		{
+			if (!(condition is UnaryLogicCondition logicCondition))
+				return null;
+
 			UnaryLogicKind? kind = null;
-			UnaryLogicCondition logicCondition = condition as NotCondition;
-			if (logicCondition != null)
-			{
+			if (condition is NotCondition)
 				kind = UnaryLogicKind.Not;
-			}
-			if (logicCondition == null)
+			if (kind == null)
 				return null;
 
 			var child = ConditionViewModelBase.CreateFromData(logicCondition.Child);
