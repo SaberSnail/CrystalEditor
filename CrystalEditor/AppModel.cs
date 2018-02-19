@@ -11,31 +11,11 @@ namespace CrystalEditor
 {
 	public sealed class AppModel
 	{
-		public static string OrganizationName
-		{
-			get { return "AStott Productions"; }
-		}
-
-		public static string ApplicationName
-		{
-			get { return "Crystal Editor"; }
-		}
-
-		public static AppModel Current
-		{
-			get
-			{
-				return ((App) Application.Current).AppModel;
-			}
-		}
-
-		public AppModel()
-		{
-		}
+		public static AppModel Current => ((App) Application.Current).AppModel;
 
 		public event EventHandler OnStartupFinished;
 
-		public MainWindowViewModel MainWindowViewModel { get; set; }
+		public MainWindowViewModel MainWindowViewModel { get; private set; }
 
 		public void Startup()
 		{

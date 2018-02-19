@@ -8,17 +8,17 @@ namespace CrystalEditor.ViewModels
 	{
 		protected ViewModelBase()
 		{
-			m_dispatcher = Dispatcher.CurrentDispatcher;
+			Dispatcher = Dispatcher.CurrentDispatcher;
 		}
+
+		protected Dispatcher Dispatcher { get; }
 
 		protected AppModel AppModel => AppModel.Current;
 
 		protected void VerifyAccess()
 		{
-			if (Dispatcher.CurrentDispatcher != m_dispatcher)
+			if (Dispatcher.CurrentDispatcher != Dispatcher)
 				throw new InvalidOperationException("Code must be run on the same thread as this object was constructed.");
 		}
-
-		readonly Dispatcher m_dispatcher;
 	}
 }
