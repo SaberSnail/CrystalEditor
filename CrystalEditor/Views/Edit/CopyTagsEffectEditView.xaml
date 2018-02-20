@@ -3,8 +3,8 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
 	xmlns:crystalEditor="clr-namespace:CrystalEditor">
-	
-	<DataTemplate DataType="{x:Type viewModels:CopyTagEffectViewModel}">
+
+	<DataTemplate DataType="{x:Type viewModels:CopyTagsEffectViewModel}">
 		<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto" />
@@ -43,5 +43,6 @@
 			<ContentControl Grid.Row="6" Grid.Column="1" Content="{Binding Target}" />
 		</Grid>
 	</DataTemplate>
-	
+
 </ResourceDictionary>
+	

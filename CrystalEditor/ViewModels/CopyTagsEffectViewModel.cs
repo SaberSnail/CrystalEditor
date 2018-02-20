@@ -4,7 +4,7 @@ using CrystalDuelingEngine.Effects;
 
 namespace CrystalEditor.ViewModels
 {
-	public sealed class CopyTagEffectViewModel : EffectViewModelBase
+	public sealed class CopyTagsEffectViewModel : EffectViewModelBase
 	{
 		public static void RegisterFactory()
 		{
@@ -97,10 +97,10 @@ namespace CrystalEditor.ViewModels
 				return null;
 
 			var condition = ConditionViewModelBase.CreateFromData(copyTagsEffect.Condition);
-			return new CopyTagEffectViewModel(copyTagsEffect.TagKey, copyTagsEffect.TagKeyMatchKind, copyTagsEffect.TagScope, copyTagsEffect.NewTagKey, copyTagsEffect.ConflictResolution, condition, copyTagsEffect.Target);
+			return new CopyTagsEffectViewModel(copyTagsEffect.TagKey, copyTagsEffect.TagKeyMatchKind, copyTagsEffect.TagScope, copyTagsEffect.NewTagKey, copyTagsEffect.ConflictResolution, condition, copyTagsEffect.Target);
 		}
 
-		private CopyTagEffectViewModel(string tagKey, MatchKind tagKeyMatchKind, TagScope tagScope, string newTagKey, KeyConflictResolutionKind conflictResolution, ConditionViewModelBase condition, EffectTarget target)
+		private CopyTagsEffectViewModel(string tagKey, MatchKind tagKeyMatchKind, TagScope tagScope, string newTagKey, KeyConflictResolutionKind conflictResolution, ConditionViewModelBase condition, EffectTarget target)
 			: base(condition, target)
 		{
 			m_tagKey = tagKey;

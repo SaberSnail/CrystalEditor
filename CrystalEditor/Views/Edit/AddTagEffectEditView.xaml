@@ -3,7 +3,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
 	xmlns:crystalEditor="clr-namespace:CrystalEditor">
-	
+
 	<DataTemplate DataType="{x:Type viewModels:AddTagEffectViewModel}">
 		<Grid>
 			<Grid.RowDefinitions>
@@ -31,5 +31,6 @@
 			<ContentControl Grid.Row="3" Grid.Column="1" Content="{Binding Target}" />
 		</Grid>
 	</DataTemplate>
-	
+
 </ResourceDictionary>
+	

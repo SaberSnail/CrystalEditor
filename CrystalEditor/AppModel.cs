@@ -38,7 +38,7 @@ namespace CrystalEditor
 		private void RegisterFactories()
 		{
 			AddTagEffectViewModel.RegisterFactory();
-			CopyTagEffectViewModel.RegisterFactory();
+			CopyTagsEffectViewModel.RegisterFactory();
 			RemoveTagsEffectViewModel.RegisterFactory();
 
 			ConditionTagViewModel.RegisterFactory();

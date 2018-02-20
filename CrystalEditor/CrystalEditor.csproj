@@ -83,7 +83,7 @@
     <Compile Include="ViewModels\ConditionTagViewModel.cs" />
     <Compile Include="ViewModels\ConditionTagViewModelBase.cs" />
     <Compile Include="ViewModels\ConditionViewModelBase.cs" />
-    <Compile Include="ViewModels\CopyTagEffectViewModel.cs" />
+    <Compile Include="ViewModels\CopyTagsEffectViewModel.cs" />
     <Compile Include="ViewModels\EffectViewModelBase.cs" />
     <Compile Include="ViewModels\EntityRulesViewModel.cs" />
     <Compile Include="GameRulesView\GameRulesViewModel.cs" />
@@ -115,7 +115,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Edit\CopyTagEffectEditView.xaml">
+    <Page Include="Views\Edit\CopyTagsEffectEditView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
