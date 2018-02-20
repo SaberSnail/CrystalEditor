@@ -97,6 +97,168 @@ namespace CrystalEditor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attacker.
+        /// </summary>
+        public static string EffectTarget_Attacker {
+            get {
+                return ResourceManager.GetString("EffectTarget_Attacker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attacker&apos;s actions.
+        /// </summary>
+        public static string EffectTarget_AttackerActions {
+            get {
+                return ResourceManager.GetString("EffectTarget_AttackerActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attacker&apos;s selected action.
+        /// </summary>
+        public static string EffectTarget_AttackerSelectedAction {
+            get {
+                return ResourceManager.GetString("EffectTarget_AttackerSelectedAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defender.
+        /// </summary>
+        public static string EffectTarget_Defender {
+            get {
+                return ResourceManager.GetString("EffectTarget_Defender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defender&apos;s actions.
+        /// </summary>
+        public static string EffectTarget_DefenderActions {
+            get {
+                return ResourceManager.GetString("EffectTarget_DefenderActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defender&apos;s selected action.
+        /// </summary>
+        public static string EffectTarget_DefenderSelectedAction {
+            get {
+                return ResourceManager.GetString("EffectTarget_DefenderSelectedAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary workspace.
+        /// </summary>
+        public static string EffectTarget_TemporaryWorkspace {
+            get {
+                return ResourceManager.GetString("EffectTarget_TemporaryWorkspace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string KeyConflictResolutionKind_Add {
+            get {
+                return ResourceManager.GetString("KeyConflictResolutionKind_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keep all.
+        /// </summary>
+        public static string KeyConflictResolutionKind_KeepAll {
+            get {
+                return ResourceManager.GetString("KeyConflictResolutionKind_KeepAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keep larger.
+        /// </summary>
+        public static string KeyConflictResolutionKind_KeepLarger {
+            get {
+                return ResourceManager.GetString("KeyConflictResolutionKind_KeepLarger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keep smaller.
+        /// </summary>
+        public static string KeyConflictResolutionKind_KeepSmaller {
+            get {
+                return ResourceManager.GetString("KeyConflictResolutionKind_KeepSmaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replace.
+        /// </summary>
+        public static string KeyConflictResolutionKind_Replace {
+            get {
+                return ResourceManager.GetString("KeyConflictResolutionKind_Replace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subtract.
+        /// </summary>
+        public static string KeyConflictResolutionKind_Subtract {
+            get {
+                return ResourceManager.GetString("KeyConflictResolutionKind_Subtract", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contains.
+        /// </summary>
+        public static string MatchKind_Contains {
+            get {
+                return ResourceManager.GetString("MatchKind_Contains", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exact.
+        /// </summary>
+        public static string MatchKind_Exact {
+            get {
+                return ResourceManager.GetString("MatchKind_Exact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prefix.
+        /// </summary>
+        public static string MatchKind_Prefix {
+            get {
+                return ResourceManager.GetString("MatchKind_Prefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reg. exp..
+        /// </summary>
+        public static string MatchKind_Regex {
+            get {
+                return ResourceManager.GetString("MatchKind_Regex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Suffix.
+        /// </summary>
+        public static string MatchKind_Suffix {
+            get {
+                return ResourceManager.GetString("MatchKind_Suffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add tag.
         /// </summary>
         public static string NewAddTagLabel {
@@ -210,6 +372,96 @@ namespace CrystalEditor {
         public static string TagKeyMatchKindHeaderLabel {
             get {
                 return ResourceManager.GetString("TagKeyMatchKindHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attacker.
+        /// </summary>
+        public static string TagScope_Attacker {
+            get {
+                return ResourceManager.GetString("TagScope_Attacker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attacker&apos;s action.
+        /// </summary>
+        public static string TagScope_AttackerAction {
+            get {
+                return ResourceManager.GetString("TagScope_AttackerAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attacker&apos;s result.
+        /// </summary>
+        public static string TagScope_AttackerResult {
+            get {
+                return ResourceManager.GetString("TagScope_AttackerResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Battle.
+        /// </summary>
+        public static string TagScope_Battle {
+            get {
+                return ResourceManager.GetString("TagScope_Battle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current action.
+        /// </summary>
+        public static string TagScope_CurrentAction {
+            get {
+                return ResourceManager.GetString("TagScope_CurrentAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defender.
+        /// </summary>
+        public static string TagScope_Defender {
+            get {
+                return ResourceManager.GetString("TagScope_Defender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defender&apos;s action.
+        /// </summary>
+        public static string TagScope_DefenderAction {
+            get {
+                return ResourceManager.GetString("TagScope_DefenderAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defender&apos;s result.
+        /// </summary>
+        public static string TagScope_DefenderResult {
+            get {
+                return ResourceManager.GetString("TagScope_DefenderResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to None.
+        /// </summary>
+        public static string TagScope_None {
+            get {
+                return ResourceManager.GetString("TagScope_None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary workspace.
+        /// </summary>
+        public static string TagScope_TemporaryWorkspace {
+            get {
+                return ResourceManager.GetString("TagScope_TemporaryWorkspace", resourceCulture);
             }
         }
         

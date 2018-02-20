@@ -131,6 +131,60 @@
     <value>Copy "{0}" tag to "{1}"</value>
     <comment>{0} is the source tag key; {1} is the destination tag key</comment>
   </data>
+  <data name="EffectTarget_Attacker" xml:space="preserve">
+    <value>Attacker</value>
+  </data>
+  <data name="EffectTarget_AttackerActions" xml:space="preserve">
+    <value>Attacker's actions</value>
+  </data>
+  <data name="EffectTarget_AttackerSelectedAction" xml:space="preserve">
+    <value>Attacker's selected action</value>
+  </data>
+  <data name="EffectTarget_Defender" xml:space="preserve">
+    <value>Defender</value>
+  </data>
+  <data name="EffectTarget_DefenderActions" xml:space="preserve">
+    <value>Defender's actions</value>
+  </data>
+  <data name="EffectTarget_DefenderSelectedAction" xml:space="preserve">
+    <value>Defender's selected action</value>
+  </data>
+  <data name="EffectTarget_TemporaryWorkspace" xml:space="preserve">
+    <value>Temporary workspace</value>
+  </data>
+  <data name="KeyConflictResolutionKind_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="KeyConflictResolutionKind_KeepAll" xml:space="preserve">
+    <value>Keep all</value>
+  </data>
+  <data name="KeyConflictResolutionKind_KeepLarger" xml:space="preserve">
+    <value>Keep larger</value>
+  </data>
+  <data name="KeyConflictResolutionKind_KeepSmaller" xml:space="preserve">
+    <value>Keep smaller</value>
+  </data>
+  <data name="KeyConflictResolutionKind_Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="KeyConflictResolutionKind_Subtract" xml:space="preserve">
+    <value>Subtract</value>
+  </data>
+  <data name="MatchKind_Contains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="MatchKind_Exact" xml:space="preserve">
+    <value>Exact</value>
+  </data>
+  <data name="MatchKind_Prefix" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="MatchKind_Regex" xml:space="preserve">
+    <value>Reg. exp.</value>
+  </data>
+  <data name="MatchKind_Suffix" xml:space="preserve">
+    <value>Suffix</value>
+  </data>
   <data name="NewAddTagLabel" xml:space="preserve">
     <value>Add tag</value>
   </data>
@@ -173,6 +227,36 @@
   </data>
   <data name="TagScopeHeaderLabel" xml:space="preserve">
     <value>Scope:</value>
+  </data>
+  <data name="TagScope_Attacker" xml:space="preserve">
+    <value>Attacker</value>
+  </data>
+  <data name="TagScope_AttackerAction" xml:space="preserve">
+    <value>Attacker's action</value>
+  </data>
+  <data name="TagScope_AttackerResult" xml:space="preserve">
+    <value>Attacker's result</value>
+  </data>
+  <data name="TagScope_Battle" xml:space="preserve">
+    <value>Battle</value>
+  </data>
+  <data name="TagScope_CurrentAction" xml:space="preserve">
+    <value>Current action</value>
+  </data>
+  <data name="TagScope_Defender" xml:space="preserve">
+    <value>Defender</value>
+  </data>
+  <data name="TagScope_DefenderAction" xml:space="preserve">
+    <value>Defender's action</value>
+  </data>
+  <data name="TagScope_DefenderResult" xml:space="preserve">
+    <value>Defender's result</value>
+  </data>
+  <data name="TagScope_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="TagScope_TemporaryWorkspace" xml:space="preserve">
+    <value>Temporary workspace</value>
   </data>
   <data name="TargetHeaderLabel" xml:space="preserve">
     <value>Target:</value>
