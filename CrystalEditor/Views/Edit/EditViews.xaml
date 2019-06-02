@@ -3,10 +3,7 @@
 	>
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="AddTagEffectEditView.xaml" />
-		<ResourceDictionary Source="CopyTagsEffectEditView.xaml" />
-		<ResourceDictionary Source="RemoveTagsEffectEditView.xaml" />
-
+		<ResourceDictionary Source="EffectEditViews.xaml" />
 		<ResourceDictionary Source="ConditionEditViews.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 

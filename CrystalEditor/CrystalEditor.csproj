@@ -119,21 +119,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Edit\CopyTagsEffectEditView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\Edit\EditViews.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Edit\RemoveTagsEffectEditView.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Views\Edit\EffectEditViews.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Edit\AddTagEffectEditView.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Theme\Default.xaml">
       <SubType>Designer</SubType>
