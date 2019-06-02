@@ -2,6 +2,7 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:crystalEditor="clr-namespace:CrystalEditor"
+	xmlns:enumEditor="clr-namespace:CrystalEditor.Controls.EnumEditor"
 	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
 	xmlns:windows="clr-namespace:GoldenAnvil.Utility.Windows;assembly=GoldenAnvil.Utility.Windows"
 	>
@@ -17,7 +18,7 @@
 
 	<DataTemplate DataType="{x:Type viewModels:BinaryLogicConditionViewModel}">
 		<DockPanel>
-			<ContentControl DockPanel.Dock="Top" Content="{Binding LogicKind, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+			<enumEditor:EnumEditor DockPanel.Dock="Top" SelectedValue="{Binding LogicKind}" />
 			<ItemsControl Margin="{StaticResource IndentMargin}" ItemsSource="{Binding Children}" />
 		</DockPanel>
 	</DataTemplate>
@@ -39,10 +40,10 @@
 				Grid.Column="0"
 				Text="{x:Static crystalEditor:OurResources.MatchScopesHeaderLabel}"
 				/>
-			<ContentControl
+			<enumEditor:EnumEditor
 				Grid.Row="0"
 				Grid.Column="1"
-				Content="{Binding MatchScopes, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}"
+				SelectedValue="{Binding MatchScopes}"
 				/>
 
 			<TextBlock
@@ -61,10 +62,10 @@
 				Grid.Column="0"
 				Text="{x:Static crystalEditor:OurResources.KeyMatchKindHeaderLabel}"
 				/>
-			<ContentControl
+			<enumEditor:EnumEditor
 				Grid.Row="2"
 				Grid.Column="1"
-				Content="{Binding KeyMatchKind, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}"
+				SelectedValue="{Binding KeyMatchKind}"
 				/>
 
 		</Grid>
@@ -79,7 +80,7 @@
 
 	<DataTemplate DataType="{x:Type viewModels:UnaryLogicConditionViewModel}">
 		<DockPanel>
-			<ContentControl DockPanel.Dock="Left" Content="{Binding LogicKind, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+			<enumEditor:EnumEditor DockPanel.Dock="Left" SelectedValue="{Binding LogicKind}" />
 			<ContentControl Content="{Binding Child}" />
 		</DockPanel>
 	</DataTemplate>
@@ -87,7 +88,7 @@
 	<DataTemplate DataType="{x:Type viewModels:ValueCompareConditionViewModel}">
 		<DockPanel>
 			<DockPanel Dock="Top">
-				<ContentControl DockPanel.Dock="Left" Content="{Binding CompareKind, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+				<enumEditor:EnumEditor DockPanel.Dock="Left" SelectedValue="{Binding CompareKind}" />
 				<ContentControl x:Name="IntValue"
 					Content="{Binding CompareIntValue}"
 					Visibility="{Binding CompareIntValue, Converter={x:Static windows:CommonConverters.IsNullToVisibility}}"

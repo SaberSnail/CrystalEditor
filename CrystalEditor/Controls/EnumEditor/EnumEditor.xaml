@@ -1,0 +1,25 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:crystalEditor="clr-namespace:CrystalEditor"
+	xmlns:local="clr-namespace:CrystalEditor.Controls.EnumEditor"
+	xmlns:windows="clr-namespace:GoldenAnvil.Utility.Windows;assembly=GoldenAnvil.Utility.Windows"
+	>
+
+	<DataTemplate x:Key="EnumValueTemplate">
+		<TextBlock Text="{Binding Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+	</DataTemplate>
+
+	<ControlTemplate x:Key="EnumEditorTemplate" TargetType="local:EnumEditor">
+		<ComboBox
+			ItemTemplate="{StaticResource EnumValueTemplate}"
+			ItemsSource="{Binding AvailableValues, RelativeSource={RelativeSource TemplatedParent}}"
+			SelectedValue="{Binding SelectedValue, RelativeSource={RelativeSource TemplatedParent}}"
+			/>
+	</ControlTemplate>
+
+	<Style TargetType="local:EnumEditor">
+		<Setter Property="Template" Value="{StaticResource EnumEditorTemplate}" />
+	</Style>
+
+</ResourceDictionary>

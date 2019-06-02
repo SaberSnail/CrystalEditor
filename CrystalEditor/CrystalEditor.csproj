@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppModel.cs" />
+    <Compile Include="Controls\EnumEditor\EnumEditor.cs" />
     <Compile Include="OurResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +108,14 @@
     <Compile Include="GameRulesView\GameRulesView.xaml.cs">
       <DependentUpon>GameRulesView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\EnumEditor\EnumEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
