@@ -8,7 +8,7 @@
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="pack://application:,,,/GoldenAnvil.Utility.Windows;component/Theme/Default.xaml" />
-				<ResourceDictionary Source="Views/Theme/Default.xaml" />
+				<ResourceDictionary Source="Themes/Default.xaml" />
 
 				<ResourceDictionary Source="Controls/Controls.xaml" />
 
