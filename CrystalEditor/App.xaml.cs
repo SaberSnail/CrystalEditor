@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows;
-using CrystalEditor.MainWindow;
+using CrystalEditor.Views;
 
 namespace CrystalEditor
 {

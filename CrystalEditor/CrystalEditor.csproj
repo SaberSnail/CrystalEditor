@@ -87,7 +87,7 @@
     <Compile Include="ViewModels\CopyTagsEffectViewModel.cs" />
     <Compile Include="ViewModels\EffectViewModelBase.cs" />
     <Compile Include="ViewModels\EntityRulesViewModel.cs" />
-    <Compile Include="GameRulesView\GameRulesViewModel.cs" />
+    <Compile Include="ViewModels\GameRulesViewModel.cs" />
     <Compile Include="ViewModels\HasTagConditionViewModel.cs" />
     <Compile Include="ViewModels\IntValueTagViewModel.cs" />
     <Compile Include="ViewModels\LabelledViewModelBase.cs" />
@@ -105,7 +105,7 @@
     <Compile Include="ViewModels\ValueCompareConditionViewModel.cs" />
     <Compile Include="ViewModels\ValueTagViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="GameRulesView\GameRulesView.xaml.cs">
+    <Compile Include="Views\GameRulesView.xaml.cs">
       <DependentUpon>GameRulesView.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\Controls.xaml">
@@ -116,11 +116,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow\MainWindowView.xaml">
+    <Page Include="Views\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="GameRulesView\GameRulesView.xaml">
+    <Page Include="Views\GameRulesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,10 +146,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow\MainWindowView.xaml.cs">
+    <Compile Include="Views\MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

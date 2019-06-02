@@ -1,9 +1,8 @@
 ﻿<ResourceDictionary
-	x:Class="CrystalEditor.GameRulesView.GameRulesView"
+	x:Class="CrystalEditor.Views.GameRulesView"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
-	xmlns:gameRulesView="clr-namespace:CrystalEditor.GameRulesView">
+	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels">
 	
 	<DataTemplate DataType="{x:Type viewModels:LabelledViewModelBase}">
 		<TextBlock Text="{Binding Label}" TextTrimming="CharacterEllipsis">
@@ -21,7 +20,7 @@
 		</TextBlock>
 	</HierarchicalDataTemplate>
 
-	<DataTemplate DataType="{x:Type gameRulesView:GameRulesViewModel}">
+	<DataTemplate DataType="{x:Type viewModels:GameRulesViewModel}">
 		<Grid>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*" />

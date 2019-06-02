@@ -1,9 +1,7 @@
 ﻿using CrystalDuelingEngine.Rules;
-using CrystalEditor.GameRulesView;
 using CrystalEditor.Serialization;
-using CrystalEditor.ViewModels;
 
-namespace CrystalEditor.MainWindow
+namespace CrystalEditor.ViewModels
 {
 	public sealed class MainWindowViewModel : ViewModelBase
 	{

@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using CrystalEditor.ViewModels;
 
-namespace CrystalEditor.GameRulesView
+namespace CrystalEditor.Views
 {
 	public partial class GameRulesView : ResourceDictionary
 	{

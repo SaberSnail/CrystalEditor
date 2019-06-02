@@ -12,7 +12,7 @@
 
 				<ResourceDictionary Source="Controls/Controls.xaml" />
 
-				<ResourceDictionary Source="GameRulesView/GameRulesView.xaml" />
+				<ResourceDictionary Source="Views/GameRulesView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Application.Resources>

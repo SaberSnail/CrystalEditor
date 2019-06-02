@@ -1,6 +1,7 @@
 ﻿using System.Windows;
+using CrystalEditor.ViewModels;
 
-namespace CrystalEditor.MainWindow
+namespace CrystalEditor.Views
 {
 	/// <summary>
 	/// Interaction logic for MainWindowView.xaml
