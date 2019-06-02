@@ -1,9 +1,10 @@
 ﻿<ResourceDictionary
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
 	xmlns:crystalEditor="clr-namespace:CrystalEditor"
-	xmlns:windows="clr-namespace:GoldenAnvil.Utility.Windows;assembly=GoldenAnvil.Utility.Windows">
+	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
+	xmlns:windows="clr-namespace:GoldenAnvil.Utility.Windows;assembly=GoldenAnvil.Utility.Windows"
+	>
 
 	<DataTemplate DataType="{x:Type viewModels:CopyTagsEffectViewModel}">
 		<Grid>
@@ -22,28 +23,83 @@
 				<ColumnDefinition Width="*" />
 			</Grid.ColumnDefinitions>
 
-			<TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static crystalEditor:OurResources.TagKeyHeaderLabel}" />
-			<ContentControl Grid.Row="0" Grid.Column="1" Content="{Binding TagKey}" />
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.TagKeyHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="0"
+				Grid.Column="1"
+				Content="{Binding TagKey}"
+				/>
 
-			<TextBlock Grid.Row="1" Grid.Column="0" Text="{x:Static crystalEditor:OurResources.TagKeyMatchKindHeaderLabel}" />
-			<ContentControl Grid.Row="1" Grid.Column="1" Content="{Binding TagKeyMatchKind, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+			<TextBlock
+				Grid.Row="1"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.TagKeyMatchKindHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="1"
+				Grid.Column="1"
+				Content="{Binding TagKeyMatchKind, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}"
+				/>
 
-			<TextBlock Grid.Row="2" Grid.Column="0" Text="{x:Static crystalEditor:OurResources.TagScopeHeaderLabel}" />
-			<ContentControl Grid.Row="2" Grid.Column="1" Content="{Binding TagScope, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+			<TextBlock
+				Grid.Row="2"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.TagScopeHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="2"
+				Grid.Column="1"
+				Content="{Binding TagScope, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}"
+				/>
 
-			<TextBlock Grid.Row="3" Grid.Column="0" Text="{x:Static crystalEditor:OurResources.NewTagKeyHeaderLabel}" />
-			<ContentControl Grid.Row="3" Grid.Column="1" Content="{Binding NewTagKey}" />
+			<TextBlock
+				Grid.Row="3"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.NewTagKeyHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="3"
+				Grid.Column="1"
+				Content="{Binding NewTagKey}"
+				/>
 
-			<TextBlock Grid.Row="4" Grid.Column="0" Text="{x:Static crystalEditor:OurResources.ConflictResolutionHeaderLabel}" />
-			<ContentControl Grid.Row="4" Grid.Column="1" Content="{Binding ConflictResolution, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+			<TextBlock
+				Grid.Row="4"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.ConflictResolutionHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="4"
+				Grid.Column="1"
+				Content="{Binding ConflictResolution, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}"
+				/>
 
-			<TextBlock Grid.Row="5" Grid.Column="0" Text="{x:Static crystalEditor:OurResources.ConditionHeaderLabel}" />
-			<ContentControl Grid.Row="5" Grid.Column="1" Content="{Binding Condition}" />
+			<TextBlock
+				Grid.Row="5"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.ConditionHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="5"
+				Grid.Column="1"
+				Content="{Binding Condition}"
+				/>
 
-			<TextBlock Grid.Row="6" Grid.Column="0" Text="{x:Static crystalEditor:OurResources.TargetHeaderLabel}" />
-			<ContentControl Grid.Row="6" Grid.Column="1" Content="{Binding Target, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+			<TextBlock
+				Grid.Row="6"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.TargetHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="6"
+				Grid.Column="1"
+				Content="{Binding Target, Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}"
+				/>
 		</Grid>
 	</DataTemplate>
 
 </ResourceDictionary>
-	
