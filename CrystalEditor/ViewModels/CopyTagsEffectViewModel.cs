@@ -20,7 +20,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				if (SetPropertyField(nameof(TagKey), value, ref m_tagKey))
+				if (SetPropertyField(value, ref m_tagKey))
 					RefreshLabelSoon();
 			}
 		}
@@ -34,7 +34,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(TagKeyMatchKind), value, ref m_tagKeyMatchKind);
+				SetPropertyField(value, ref m_tagKeyMatchKind);
 			}
 		}
 
@@ -47,7 +47,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(TagScope), value, ref m_tagScope);
+				SetPropertyField(value, ref m_tagScope);
 			}
 		}
 
@@ -60,7 +60,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				if (SetPropertyField(nameof(NewTagKey), value, ref m_newTagKey))
+				if (SetPropertyField(value, ref m_newTagKey))
 					RefreshLabelSoon();
 			}
 		}
@@ -74,7 +74,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(ConflictResolution), value, ref m_conflictResolution);
+				SetPropertyField(value, ref m_conflictResolution);
 			}
 		}
 

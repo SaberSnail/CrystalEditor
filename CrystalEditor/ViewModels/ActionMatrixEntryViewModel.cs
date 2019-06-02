@@ -18,7 +18,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(AttackerActionId), value, ref m_attackerActionId);
+				SetPropertyField(value, ref m_attackerActionId);
 			}
 		}
 
@@ -31,7 +31,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(DefenderActionId), value, ref m_defenderActionId);
+				SetPropertyField(value, ref m_defenderActionId);
 			}
 		}
 
@@ -44,7 +44,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(ResultId), value, ref m_resultId);
+				SetPropertyField(value, ref m_resultId);
 			}
 		}
 

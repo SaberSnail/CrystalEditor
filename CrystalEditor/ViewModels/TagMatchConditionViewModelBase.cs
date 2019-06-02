@@ -13,7 +13,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(MatchScopes), value, ref m_matchScopes);
+				SetPropertyField(value, ref m_matchScopes);
 			}
 		}
 
@@ -26,7 +26,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(MatchKey), value, ref m_matchKey);
+				SetPropertyField(value, ref m_matchKey);
 			}
 		}
 
@@ -39,7 +39,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(KeyMatchKind), value, ref m_keyMatchKind);
+				SetPropertyField(value, ref m_keyMatchKind);
 			}
 		}
 

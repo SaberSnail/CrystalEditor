@@ -24,7 +24,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(LogicKind), value, ref m_logicKind);
+				SetPropertyField(value, ref m_logicKind);
 			}
 		}
 

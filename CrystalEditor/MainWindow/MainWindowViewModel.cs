@@ -21,7 +21,7 @@ namespace CrystalEditor.MainWindow
 			}
 			private set
 			{
-				SetPropertyField(nameof(GameRules), value, ref m_gameRules);
+				SetPropertyField(value, ref m_gameRules);
 			}
 		}
 

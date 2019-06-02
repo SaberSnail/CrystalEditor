@@ -20,7 +20,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				if (SetPropertyField(nameof(Tag), value, ref m_tag))
+				if (SetPropertyField(value, ref m_tag))
 					RefreshLabelSoon();
 			}
 		}
@@ -34,7 +34,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(ConflictResolution), value, ref m_conflictResolution);
+				SetPropertyField(value, ref m_conflictResolution);
 			}
 		}
 

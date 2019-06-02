@@ -28,9 +28,9 @@ namespace CrystalEditor.GameRulesView
 			set
 			{
 				if (value is EffectViewModelBase)
-					SetPropertyField(nameof(SelectedEffect), value, ref m_selectedEffect);
+					SetPropertyField(value, ref m_selectedEffect);
 				else
-					SetPropertyField(nameof(SelectedEffect), null, ref m_selectedEffect);
+					SetPropertyField(null, ref m_selectedEffect);
 			}
 		}
 
@@ -45,7 +45,7 @@ namespace CrystalEditor.GameRulesView
 			}
 			set
 			{
-				SetPropertyField(nameof(EliminationCondition), value, ref m_eliminationCondition);
+				SetPropertyField(value, ref m_eliminationCondition);
 			}
 		}
 

@@ -26,7 +26,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(Condition), value, ref m_condition);
+				SetPropertyField(value, ref m_condition);
 			}
 		}
 
@@ -39,7 +39,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(Target), value, ref m_target);
+				SetPropertyField(value, ref m_target);
 			}
 		}
 

@@ -20,7 +20,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(CompareIntValue), value, ref m_compareIntValue);
+				SetPropertyField(value, ref m_compareIntValue);
 			}
 		}
 
@@ -33,7 +33,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(CompareStringValue), value, ref m_compareStringValue);
+				SetPropertyField(value, ref m_compareStringValue);
 			}
 		}
 
@@ -46,7 +46,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(CompareKind), value, ref m_compareKind);
+				SetPropertyField(value, ref m_compareKind);
 			}
 		}
 

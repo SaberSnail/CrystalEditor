@@ -26,7 +26,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				if (SetPropertyField(nameof(Key), value, ref m_key))
+				if (SetPropertyField(value, ref m_key))
 					RefreshLabelSoon();
 			}
 		}
@@ -40,7 +40,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(Duration), value, ref m_duration);
+				SetPropertyField(value, ref m_duration);
 			}
 		}
 

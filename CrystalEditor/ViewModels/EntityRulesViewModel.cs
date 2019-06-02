@@ -30,7 +30,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(Name), value, ref m_name);
+				SetPropertyField(value, ref m_name);
 			}
 		}
 
@@ -43,7 +43,7 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(nameof(EliminationCondition), value, ref m_eliminationCondition);
+				SetPropertyField(value, ref m_eliminationCondition);
 			}
 		}
 
