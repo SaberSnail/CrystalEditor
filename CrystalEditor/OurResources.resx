@@ -121,6 +121,30 @@
     <value>Add "{0}" tag</value>
     <comment>{0} is the tag label</comment>
   </data>
+  <data name="AlwaysConditionLabel" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="BinaryLogicKind_And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="BinaryLogicKind_Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="CompareKind_Equals" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="CompareKind_GreaterThan" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="CompareKind_GreaterThanOrEqual" xml:space="preserve">
+    <value>&gt;=</value>
+  </data>
+  <data name="CompareKind_LessThan" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="CompareKind_LessThanOrEqual" xml:space="preserve">
+    <value>&lt;=</value>
+  </data>
   <data name="ConditionHeaderLabel" xml:space="preserve">
     <value>Condition:</value>
   </data>
@@ -152,6 +176,9 @@
   <data name="EffectTarget_TemporaryWorkspace" xml:space="preserve">
     <value>Temporary workspace</value>
   </data>
+  <data name="HasTagConditionLabel" xml:space="preserve">
+    <value>Has tag</value>
+  </data>
   <data name="KeyConflictResolutionKind_Add" xml:space="preserve">
     <value>Add</value>
   </data>
@@ -170,6 +197,12 @@
   <data name="KeyConflictResolutionKind_Subtract" xml:space="preserve">
     <value>Subtract</value>
   </data>
+  <data name="KeyMatchKindHeaderLabel" xml:space="preserve">
+    <value>Key match kind:</value>
+  </data>
+  <data name="MatchKeyHeaderLabel" xml:space="preserve">
+    <value>Match key:</value>
+  </data>
   <data name="MatchKind_Contains" xml:space="preserve">
     <value>Contains</value>
   </data>
@@ -184,6 +217,12 @@
   </data>
   <data name="MatchKind_Suffix" xml:space="preserve">
     <value>Suffix</value>
+  </data>
+  <data name="MatchScopesHeaderLabel" xml:space="preserve">
+    <value>Match scopes:</value>
+  </data>
+  <data name="NeverConditionLabel" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewAddTagLabel" xml:space="preserve">
     <value>Add tag</value>
@@ -260,5 +299,8 @@
   </data>
   <data name="TargetHeaderLabel" xml:space="preserve">
     <value>Target:</value>
+  </data>
+  <data name="UnaryLogicKind_Not" xml:space="preserve">
+    <value>Not</value>
   </data>
 </root>

@@ -15,7 +15,7 @@ namespace CrystalEditor.ViewModels
 
 		protected AppModel AppModel => AppModel.Current;
 
-		protected void VerifyAccess()
+		protected override void VerifyAccess()
 		{
 			if (Dispatcher.CurrentDispatcher != Dispatcher)
 				throw new InvalidOperationException("Code must be run on the same thread as this object was constructed.");

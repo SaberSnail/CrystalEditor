@@ -1,11 +1,13 @@
 ﻿<ResourceDictionary
-	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	>
 
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="AddTagEffectEditView.xaml" />
 		<ResourceDictionary Source="CopyTagsEffectEditView.xaml" />
 		<ResourceDictionary Source="RemoveTagsEffectEditView.xaml" />
+
+		<ResourceDictionary Source="ConditionEditViews.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>
-	

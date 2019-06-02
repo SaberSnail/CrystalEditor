@@ -70,6 +70,78 @@ namespace CrystalEditor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Always.
+        /// </summary>
+        public static string AlwaysConditionLabel {
+            get {
+                return ResourceManager.GetString("AlwaysConditionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to And.
+        /// </summary>
+        public static string BinaryLogicKind_And {
+            get {
+                return ResourceManager.GetString("BinaryLogicKind_And", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Or.
+        /// </summary>
+        public static string BinaryLogicKind_Or {
+            get {
+                return ResourceManager.GetString("BinaryLogicKind_Or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =.
+        /// </summary>
+        public static string CompareKind_Equals {
+            get {
+                return ResourceManager.GetString("CompareKind_Equals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &gt;.
+        /// </summary>
+        public static string CompareKind_GreaterThan {
+            get {
+                return ResourceManager.GetString("CompareKind_GreaterThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &gt;=.
+        /// </summary>
+        public static string CompareKind_GreaterThanOrEqual {
+            get {
+                return ResourceManager.GetString("CompareKind_GreaterThanOrEqual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;.
+        /// </summary>
+        public static string CompareKind_LessThan {
+            get {
+                return ResourceManager.GetString("CompareKind_LessThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;=.
+        /// </summary>
+        public static string CompareKind_LessThanOrEqual {
+            get {
+                return ResourceManager.GetString("CompareKind_LessThanOrEqual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Condition:.
         /// </summary>
         public static string ConditionHeaderLabel {
@@ -160,6 +232,15 @@ namespace CrystalEditor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Has tag.
+        /// </summary>
+        public static string HasTagConditionLabel {
+            get {
+                return ResourceManager.GetString("HasTagConditionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
         public static string KeyConflictResolutionKind_Add {
@@ -214,6 +295,24 @@ namespace CrystalEditor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Key match kind:.
+        /// </summary>
+        public static string KeyMatchKindHeaderLabel {
+            get {
+                return ResourceManager.GetString("KeyMatchKindHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Match key:.
+        /// </summary>
+        public static string MatchKeyHeaderLabel {
+            get {
+                return ResourceManager.GetString("MatchKeyHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contains.
         /// </summary>
         public static string MatchKind_Contains {
@@ -255,6 +354,24 @@ namespace CrystalEditor {
         public static string MatchKind_Suffix {
             get {
                 return ResourceManager.GetString("MatchKind_Suffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Match scopes:.
+        /// </summary>
+        public static string MatchScopesHeaderLabel {
+            get {
+                return ResourceManager.GetString("MatchScopesHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Never.
+        /// </summary>
+        public static string NeverConditionLabel {
+            get {
+                return ResourceManager.GetString("NeverConditionLabel", resourceCulture);
             }
         }
         
@@ -480,6 +597,15 @@ namespace CrystalEditor {
         public static string TargetHeaderLabel {
             get {
                 return ResourceManager.GetString("TargetHeaderLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not.
+        /// </summary>
+        public static string UnaryLogicKind_Not {
+            get {
+                return ResourceManager.GetString("UnaryLogicKind_Not", resourceCulture);
             }
         }
     }
