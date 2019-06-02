@@ -7,7 +7,7 @@
 	>
 
 	<DataTemplate x:Key="EnumValueTemplate">
-		<TextBlock Text="{Binding Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" />
+		<TextBlock Text="{Binding Converter={x:Static windows:EnumToDisplayStringConverter.Instance}, ConverterParameter={x:Static crystalEditor:OurResources.ResourceManager}}" TextTrimming="CharacterEllipsis" />
 	</DataTemplate>
 
 	<ControlTemplate x:Key="EnumEditorTemplate" TargetType="local:EnumEditor">

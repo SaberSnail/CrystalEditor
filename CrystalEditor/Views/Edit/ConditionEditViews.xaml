@@ -18,7 +18,11 @@
 
 	<DataTemplate DataType="{x:Type viewModels:BinaryLogicConditionViewModel}">
 		<DockPanel>
-			<enumEditor:EnumEditor DockPanel.Dock="Top" SelectedValue="{Binding LogicKind}" />
+			<enumEditor:EnumEditor
+				DockPanel.Dock="Top"
+				HorizontalAlignment="Left"
+				SelectedValue="{Binding LogicKind}"
+				/>
 			<ItemsControl Margin="{StaticResource IndentMargin}" ItemsSource="{Binding Children}" />
 		</DockPanel>
 	</DataTemplate>
@@ -43,6 +47,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="0"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding MatchScopes}"
 				/>
 
@@ -65,6 +70,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="2"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding KeyMatchKind}"
 				/>
 
@@ -80,7 +86,11 @@
 
 	<DataTemplate DataType="{x:Type viewModels:UnaryLogicConditionViewModel}">
 		<DockPanel>
-			<enumEditor:EnumEditor DockPanel.Dock="Left" SelectedValue="{Binding LogicKind}" />
+			<enumEditor:EnumEditor
+				DockPanel.Dock="Left"
+				HorizontalAlignment="Left"
+				SelectedValue="{Binding LogicKind}"
+				/>
 			<ContentControl Content="{Binding Child}" />
 		</DockPanel>
 	</DataTemplate>
@@ -88,7 +98,11 @@
 	<DataTemplate DataType="{x:Type viewModels:ValueCompareConditionViewModel}">
 		<DockPanel>
 			<DockPanel Dock="Top">
-				<enumEditor:EnumEditor DockPanel.Dock="Left" SelectedValue="{Binding CompareKind}" />
+				<enumEditor:EnumEditor
+					DockPanel.Dock="Left"
+					HorizontalAlignment="Left"
+					SelectedValue="{Binding CompareKind}"
+					/>
 				<ContentControl x:Name="IntValue"
 					Content="{Binding CompareIntValue}"
 					Visibility="{Binding CompareIntValue, Converter={x:Static windows:CommonConverters.IsNullToVisibility}}"

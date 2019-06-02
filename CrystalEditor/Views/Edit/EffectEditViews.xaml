@@ -4,7 +4,6 @@
 	xmlns:crystalEditor="clr-namespace:CrystalEditor"
 	xmlns:enumEditor="clr-namespace:CrystalEditor.Controls.EnumEditor"
 	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
-	xmlns:windows="clr-namespace:GoldenAnvil.Utility.Windows;assembly=GoldenAnvil.Utility.Windows"
 	>
 
 	<DataTemplate DataType="{x:Type viewModels:AddTagEffectViewModel}">
@@ -40,6 +39,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="1"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding ConflictResolution}"
 				/>
 
@@ -62,6 +62,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="3"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding Target}"
 				/>
 		</Grid>
@@ -103,6 +104,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="1"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding TagKeyMatchKind}"
 				/>
 
@@ -114,6 +116,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="2"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding TagScope}"
 				/>
 
@@ -136,6 +139,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="4"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding ConflictResolution}"
 				/>
 
@@ -158,6 +162,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="6"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding Target}"
 				/>
 		</Grid>
@@ -196,6 +201,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="1"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding TagKeyMatchKind}"
 				/>
 
@@ -218,6 +224,7 @@
 			<enumEditor:EnumEditor
 				Grid.Row="3"
 				Grid.Column="1"
+				HorizontalAlignment="Left"
 				SelectedValue="{Binding Target}"
 				/>
 		</Grid>
