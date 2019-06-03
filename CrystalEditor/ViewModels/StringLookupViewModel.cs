@@ -15,6 +15,11 @@ namespace CrystalEditor.ViewModels
 
 		public ObservableCollection<StringLookupItemViewModel> Items { get; }
 
+		public string Lookup(string key)
+		{
+			return Items.FirstOrDefault(x => x.Key == key)?.Value;
+		}
+
 		public StringLookup ToStringLookup()
 		{
 			return new StringLookup(Items.Select(x => new Tuple<string, string>(x.Key, x.Value)));

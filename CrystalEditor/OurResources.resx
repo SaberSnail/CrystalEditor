@@ -176,6 +176,9 @@
   <data name="EffectTarget_TemporaryWorkspace" xml:space="preserve">
     <value>Temporary workspace</value>
   </data>
+  <data name="GameRulesLabel" xml:space="preserve">
+    <value>Game Rules</value>
+  </data>
   <data name="HasTagConditionLabel" xml:space="preserve">
     <value>Has tag</value>
   </data>

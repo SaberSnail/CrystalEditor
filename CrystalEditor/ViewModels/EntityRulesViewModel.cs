@@ -30,9 +30,11 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				SetPropertyField(value, ref m_name);
+				SetPropertyField(new [] {nameof(Name), nameof(RenderedName) }, value, ref m_name);
 			}
 		}
+
+		public string RenderedName => StringLookup.Lookup(m_name);
 
 		public ConditionViewModelBase EliminationCondition
 		{

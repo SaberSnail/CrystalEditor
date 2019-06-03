@@ -2,12 +2,13 @@
 	x:Class="CrystalEditor.Views.GameRulesView"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels">
-	
+	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
+	>
+
 	<DataTemplate DataType="{x:Type viewModels:LabelledViewModelBase}">
 		<TextBlock Text="{Binding Label}" TextTrimming="CharacterEllipsis">
 			<TextBlock.ToolTip>
-				<ToolTip Style="{StaticResource TrimmedInPlaceToolTipStyle}" Content="{Binding Label}" />
+				<ToolTip Content="{Binding Label}" Style="{StaticResource TrimmedInPlaceToolTipStyle}" />
 			</TextBlock.ToolTip>
 		</TextBlock>
 	</DataTemplate>
@@ -15,7 +16,7 @@
 	<HierarchicalDataTemplate DataType="{x:Type viewModels:TreeNodeViewModelBase}" ItemsSource="{Binding Children}">
 		<TextBlock Text="{Binding Label}" TextTrimming="CharacterEllipsis">
 			<TextBlock.ToolTip>
-				<ToolTip Style="{StaticResource TrimmedInPlaceToolTipStyle}" Content="{Binding Label}" />
+				<ToolTip Content="{Binding Label}" Style="{StaticResource TrimmedInPlaceToolTipStyle}" />
 			</TextBlock.ToolTip>
 		</TextBlock>
 	</HierarchicalDataTemplate>
@@ -25,12 +26,20 @@
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*" />
 				<ColumnDefinition Width="4" />
-				<ColumnDefinition Width="3*"/>
+				<ColumnDefinition Width="3*" />
 			</Grid.ColumnDefinitions>
-			
-			<TreeView ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding Effects}" SelectedItemChanged="EffectsTreeView_OnSelectedItemChanged" />
 
-			<GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch" />
+			<TreeView
+				ItemsSource="{Binding Effects}"
+				ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+				SelectedItemChanged="EffectsTreeView_OnSelectedItemChanged"
+				/>
+
+			<GridSplitter
+				Grid.Column="1"
+				Width="4"
+				HorizontalAlignment="Stretch"
+				/>
 
 			<ContentControl Grid.Column="2" Content="{Binding SelectedEffect}">
 				<ContentControl.Resources>
@@ -43,5 +52,5 @@
 			</ContentControl>
 		</Grid>
 	</DataTemplate>
-	
+
 </ResourceDictionary>

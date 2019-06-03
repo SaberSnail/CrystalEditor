@@ -232,6 +232,15 @@ namespace CrystalEditor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game Rules.
+        /// </summary>
+        public static string GameRulesLabel {
+            get {
+                return ResourceManager.GetString("GameRulesLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Has tag.
         /// </summary>
         public static string HasTagConditionLabel {
