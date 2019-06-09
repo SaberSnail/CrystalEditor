@@ -3,9 +3,9 @@ using System.Windows.Threading;
 
 namespace CrystalEditor.ViewModels
 {
-	public abstract class LabelledViewModelBase : ViewModelBase
+	public abstract class LabeledViewModelBase : ViewModelBase
 	{
-		protected LabelledViewModelBase()
+		protected LabeledViewModelBase()
 		{
 			m_refreshLabelTimer = new DispatcherTimer(DispatcherPriority.Normal, Dispatcher)
 			{

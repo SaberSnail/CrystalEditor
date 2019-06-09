@@ -4,7 +4,7 @@ using CrystalDuelingEngine.Tags;
 
 namespace CrystalEditor.ViewModels
 {
-	public abstract class TagViewModelBase : LabelledViewModelBase
+	public abstract class TagViewModelBase : LabeledViewModelBase
 	{
 		public static TagViewModelBase CreateFromData(TagBase tag)
 		{

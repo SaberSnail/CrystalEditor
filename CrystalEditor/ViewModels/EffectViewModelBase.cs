@@ -4,7 +4,7 @@ using CrystalDuelingEngine.Effects;
 
 namespace CrystalEditor.ViewModels
 {
-	public abstract class EffectViewModelBase : LabelledViewModelBase
+	public abstract class EffectViewModelBase : LabeledViewModelBase
 	{
 		public static EffectViewModelBase CreateFromData(EffectBase effect)
 		{

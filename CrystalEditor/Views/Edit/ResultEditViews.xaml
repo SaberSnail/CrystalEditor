@@ -1,0 +1,68 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:crystalEditor="clr-namespace:CrystalEditor"
+	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
+	>
+
+	<DataTemplate DataType="{x:Type viewModels:ResultViewModel}">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.KeyHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="0"
+				Grid.Column="1"
+				Content="{Binding Key}"
+				/>
+
+			<TextBlock
+				Grid.Row="1"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.NameHeaderLabel}"
+				/>
+			<ContentControl
+				Grid.Row="1"
+				Grid.Column="1"
+				Content="{Binding RenderedName}"
+				/>
+
+			<TextBlock
+				Grid.Row="2"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.TagsHeaderLabel}"
+				/>
+			<ItemsControl
+				Grid.Row="2"
+				Grid.Column="1"
+				ItemsSource="{Binding Tags}"
+				/>
+
+			<TextBlock
+				Grid.Row="3"
+				Grid.Column="0"
+				Text="{x:Static crystalEditor:OurResources.EffectsHeaderLabel}"
+				/>
+			<ItemsControl
+				Grid.Row="3"
+				Grid.Column="1"
+				ItemsSource="{Binding Effects}"
+				/>
+
+		</Grid>
+	</DataTemplate>
+
+</ResourceDictionary>

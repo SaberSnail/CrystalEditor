@@ -3,8 +3,11 @@
 	>
 
 	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="ActionEditViews.xaml" />
 		<ResourceDictionary Source="EffectEditViews.xaml" />
 		<ResourceDictionary Source="ConditionEditViews.xaml" />
+		<ResourceDictionary Source="ResultEditViews.xaml" />
+		<ResourceDictionary Source="TagEditViews.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

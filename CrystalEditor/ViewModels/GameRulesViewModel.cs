@@ -17,7 +17,7 @@ namespace CrystalEditor.ViewModels
 			return new GameRulesViewModel(preBattleEffects, postBattleEffects, postTurnEffects, preResultEffects, postResultEffects, eliminationCondition);
 		}
 
-		public LabelledViewModelBase SelectedEffect
+		public LabeledViewModelBase SelectedEffect
 		{
 			get
 			{
@@ -26,10 +26,10 @@ namespace CrystalEditor.ViewModels
 			}
 			set
 			{
-				if (value is EffectViewModelBase)
-					SetPropertyField(value, ref m_selectedEffect);
-				else
+				if (value is TreeNodeViewModelBase)
 					SetPropertyField(null, ref m_selectedEffect);
+				else
+					SetPropertyField(value, ref m_selectedEffect);
 			}
 		}
 
@@ -88,6 +88,6 @@ namespace CrystalEditor.ViewModels
 		readonly TreeNodeViewModel<EffectViewModelBase> m_postTurnEffectsNode;
 		readonly TreeNodeViewModel<EffectViewModelBase> m_postBattleEffectsNode;
 		ConditionViewModelBase m_eliminationCondition;
-		LabelledViewModelBase m_selectedEffect;
+		LabeledViewModelBase m_selectedEffect;
 	}
 }

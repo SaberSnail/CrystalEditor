@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActionLabel" xml:space="preserve">
+    <value>{0} - {1}</value>
+    <comment>{0} is the key; {1} is the name</comment>
+  </data>
   <data name="AddTagLabel" xml:space="preserve">
     <value>Add "{0}" tag</value>
     <comment>{0} is the tag label</comment>
@@ -227,6 +231,12 @@
   <data name="NeverConditionLabel" xml:space="preserve">
     <value>Never</value>
   </data>
+  <data name="NewActionLabel" xml:space="preserve">
+    <value>Add action</value>
+  </data>
+  <data name="NewResultLabel" xml:space="preserve">
+    <value>Add result</value>
+  </data>
   <data name="NewAddTagLabel" xml:space="preserve">
     <value>Add tag</value>
   </data>
@@ -257,6 +267,10 @@
   <data name="RemoveTagLabel" xml:space="preserve">
     <value>Remove "{0}" tag</value>
     <comment>{0} is the tag key</comment>
+  </data>
+  <data name="ResultLabel" xml:space="preserve">
+    <value>{0} - {1}</value>
+    <comment>{0} is the key; {1} is the name</comment>
   </data>
   <data name="TagHeaderLabel" xml:space="preserve">
     <value>Tag:</value>
@@ -305,5 +319,26 @@
   </data>
   <data name="UnaryLogicKind_Not" xml:space="preserve">
     <value>Not</value>
+  </data>
+  <data name="ActionsNodeLabel" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="EffectsHeaderLabel" xml:space="preserve">
+    <value>Effects:</value>
+  </data>
+  <data name="KeyHeaderLabel" xml:space="preserve">
+    <value>Key:</value>
+  </data>
+  <data name="NameHeaderLabel" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="PreTurnEffectsNodeLabel" xml:space="preserve">
+    <value>Pre-Turn Effects</value>
+  </data>
+  <data name="ResultsNodeLabel" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="TagsHeaderLabel" xml:space="preserve">
+    <value>Tags:</value>
   </data>
 </root>

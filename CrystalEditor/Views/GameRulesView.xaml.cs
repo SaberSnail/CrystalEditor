@@ -8,7 +8,7 @@ namespace CrystalEditor.Views
 	{
 		private void EffectsTreeView_OnSelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
 		{
-			((GameRulesViewModel) ((TreeView) sender).DataContext).SelectedEffect = (LabelledViewModelBase) e.NewValue;
+			((GameRulesViewModel) ((TreeView) sender).DataContext).SelectedEffect = (LabeledViewModelBase) e.NewValue;
 		}
 	}
 }

@@ -9,10 +9,12 @@
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="pack://application:,,,/GoldenAnvil.Utility.Windows;component/Theme/Default.xaml" />
 				<ResourceDictionary Source="Themes/Default.xaml" />
+				<ResourceDictionary Source="Themes/TreeView.xaml" />
 
 				<ResourceDictionary Source="Controls/Controls.xaml" />
 
 				<ResourceDictionary Source="Views/GameRulesView.xaml" />
+				<ResourceDictionary Source="Views/EntityRulesView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Application.Resources>

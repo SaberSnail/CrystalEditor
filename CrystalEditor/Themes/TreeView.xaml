@@ -1,0 +1,35 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:viewModels="clr-namespace:CrystalEditor.ViewModels"
+	>
+
+	<HierarchicalDataTemplate DataType="{x:Type viewModels:TreeNodeViewModelBase}" ItemsSource="{Binding Children}">
+		<TextBlock Text="{Binding Label}" TextTrimming="CharacterEllipsis">
+			<TextBlock.ToolTip>
+				<ToolTip Content="{Binding Label}" Style="{StaticResource TrimmedInPlaceToolTipStyle}" />
+			</TextBlock.ToolTip>
+		</TextBlock>
+	</HierarchicalDataTemplate>
+
+	<Style x:Key="LabeledItemTreeViewStyle" TargetType="{x:Type TreeView}">
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<StackPanel>
+						<StackPanel.Resources>
+							<DataTemplate DataType="{x:Type viewModels:LabeledViewModelBase}">
+								<TextBlock Text="{Binding Label}" TextTrimming="CharacterEllipsis">
+									<TextBlock.ToolTip>
+										<ToolTip Content="{Binding Label}" Style="{StaticResource TrimmedInPlaceToolTipStyle}" />
+									</TextBlock.ToolTip>
+								</TextBlock>
+							</DataTemplate>
+						</StackPanel.Resources>
+					</StackPanel>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

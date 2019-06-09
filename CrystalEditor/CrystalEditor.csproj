@@ -90,7 +90,7 @@
     <Compile Include="ViewModels\GameRulesViewModel.cs" />
     <Compile Include="ViewModels\HasTagConditionViewModel.cs" />
     <Compile Include="ViewModels\IntValueTagViewModel.cs" />
-    <Compile Include="ViewModels\LabelledViewModelBase.cs" />
+    <Compile Include="ViewModels\LabeledViewModelBase.cs" />
     <Compile Include="ViewModels\RemoveTagsEffectViewModel.cs" />
     <Compile Include="ViewModels\ResultViewModel.cs" />
     <Compile Include="ViewModels\SimpleTagViewModel.cs" />
@@ -105,6 +105,9 @@
     <Compile Include="ViewModels\ValueCompareConditionViewModel.cs" />
     <Compile Include="ViewModels\ValueTagViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\EntityRulesView.xaml.cs">
+      <DependentUpon>EntityRulesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\GameRulesView.xaml.cs">
       <DependentUpon>GameRulesView.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\EnumEditor\EnumEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\TreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Edit\ActionEditViews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Edit\ResultEditViews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Edit\TagEditViews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EntityRulesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
