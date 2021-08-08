@@ -1,231 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{516BABF8-DC5D-40C5-96FE-62BB31B97D7D}</ProjectGuid>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CrystalEditor</RootNamespace>
-    <AssemblyName>CrystalEditor</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xaml">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AppModel.cs" />
-    <Compile Include="Controls\EnumEditor\EnumEditor.cs" />
-    <Compile Include="OurResources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OurResources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Serialization\JsonDeserializer.cs" />
-    <Compile Include="Serialization\JsonSerializer.cs" />
-    <Compile Include="ViewModels\ActionMatrixEntryViewModel.cs" />
-    <Compile Include="ViewModels\ActionMatrixViewModel.cs" />
-    <Compile Include="ViewModels\ActionViewModel.cs" />
-    <Compile Include="ViewModels\AddTagEffectViewModel.cs" />
-    <Compile Include="ViewModels\AlwaysConditionViewModel.cs" />
-    <Compile Include="ViewModels\BinaryLogicConditionViewModel.cs" />
-    <Compile Include="ViewModels\BinaryLogicKind.cs" />
-    <Compile Include="ViewModels\CompareKind.cs" />
-    <Compile Include="ViewModels\ConditionalTagsTagViewModel.cs" />
-    <Compile Include="ViewModels\ConditionTagViewModel.cs" />
-    <Compile Include="ViewModels\ConditionTagViewModelBase.cs" />
-    <Compile Include="ViewModels\ConditionViewModelBase.cs" />
-    <Compile Include="ViewModels\CopyTagsEffectViewModel.cs" />
-    <Compile Include="ViewModels\EffectViewModelBase.cs" />
-    <Compile Include="ViewModels\EntityRulesViewModel.cs" />
-    <Compile Include="ViewModels\GameRulesViewModel.cs" />
-    <Compile Include="ViewModels\HasTagConditionViewModel.cs" />
-    <Compile Include="ViewModels\IntValueTagViewModel.cs" />
-    <Compile Include="ViewModels\LabeledViewModelBase.cs" />
-    <Compile Include="ViewModels\RemoveTagsEffectViewModel.cs" />
-    <Compile Include="ViewModels\ResultViewModel.cs" />
-    <Compile Include="ViewModels\SimpleTagViewModel.cs" />
-    <Compile Include="ViewModels\StringLookupItemViewModel.cs" />
-    <Compile Include="ViewModels\StringLookupViewModel.cs" />
-    <Compile Include="ViewModels\StringValueTagViewModel.cs" />
-    <Compile Include="ViewModels\TagMatchConditionViewModelBase.cs" />
-    <Compile Include="ViewModels\TagViewModelBase.cs" />
-    <Compile Include="ViewModels\TreeNodeViewModelBase.cs" />
-    <Compile Include="ViewModels\UnaryLogicConditionViewModel.cs" />
-    <Compile Include="ViewModels\UnaryLogicKind.cs" />
-    <Compile Include="ViewModels\ValueCompareConditionViewModel.cs" />
-    <Compile Include="ViewModels\ValueTagViewModelBase.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\EntityRulesView.xaml.cs">
-      <DependentUpon>EntityRulesView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\GameRulesView.xaml.cs">
-      <DependentUpon>GameRulesView.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Controls\Controls.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\EnumEditor\EnumEditor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\TreeView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Edit\ActionEditViews.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Edit\ResultEditViews.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Edit\TagEditViews.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\EntityRulesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainWindowView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\GameRulesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Edit\ConditionEditViews.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Edit\EditViews.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Edit\EffectEditViews.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Default.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Margins.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Views\MainWindowView.xaml.cs">
-      <DependentUpon>MainWindowView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <EmbeddedResource Include="OurResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>OurResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.2.237901">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\CrystalDuelingEngine\CrystalDuelingEngine\CrystalDuelingEngine.csproj">
-      <Project>{94058FDB-FBEE-42BB-80DE-3AE422732963}</Project>
-      <Name>CrystalDuelingEngine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\GoldenAnvil.Utility\GoldenAnvil.Utility.Windows\GoldenAnvil.Utility.Windows.csproj">
-      <Project>{49ea99af-8751-46fc-9fed-57fdd8f25e3b}</Project>
-      <Name>GoldenAnvil.Utility.Windows</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\GoldenAnvil.Utility\GoldenAnvil.Utility\GoldenAnvil.Utility.csproj">
-      <Project>{71ec1554-7650-44cd-b30b-d1e5a2ae3c1e}</Project>
-      <Name>GoldenAnvil.Utility</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\..\CrystalDuelingEngine\CrystalDuelingEngine\CrystalDuelingEngine.csproj" />
+    <ProjectReference Include="..\..\GoldenAnvil.Utility\GoldenAnvil.Utility.Windows\GoldenAnvil.Utility.Windows.csproj" />
+    <ProjectReference Include="..\..\GoldenAnvil.Utility\GoldenAnvil.Utility\GoldenAnvil.Utility.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
 </Project>
